@@ -1,0 +1,60 @@
+[2025-03-03T01:48:37.984Z] POST /api/v1/auth/register-customer
+    - Status: 404 - Response Time: 6ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: undefined
+[2025-03-03T01:48:52.020Z] POST /api/v1/demo
+    - Status: 404 - Response Time: 2ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: undefined
+[2025-03-03T01:49:50.063Z] GET /api/v1/demo
+    - Status: 500 - Response Time: 6ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: {}
+[2025-03-03T01:50:26.496Z] GET /api/v1/demo
+    - Status: 200 - Response Time: 23ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: {}
+[2025-03-03T01:50:36.900Z] GET /api/v1/auth/register-customer
+    - Status: 403 - Response Time: 2ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: {}
+[2025-03-03T01:50:46.461Z] POST /api/v1/auth/register-customer
+    - Status: 404 - Response Time: 3ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: undefined
+[2025-03-03T01:51:00.387Z] POST /api/v1/auth/register-customer
+    - Status: 403 - Response Time: 7ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: {}
+[2025-03-03T01:51:18.176Z] POST /api/v1/auth/register-customer
+    - Status: 400 - Response Time: 6ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {} - Query: {}
+    - Params: {}
+[2025-03-03T01:53:17.348Z] POST /api/v1/auth/register-customer
+    - Status: 500 - Response Time: 31ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {"username":"john_doe","password":"securepassword","balance":100} - Query: {}
+    - Params: {}
+[2025-03-03T01:55:05.366Z] POST /api/v1/auth/register-customer
+    - Status: 500 - Response Time: 18ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {"username":"john_doe","password":"securepassword","balance":100} - Query: {}
+    - Params: {}
+[2025-03-03T01:56:37.345Z] POST /api/v1/auth/register-customer
+    - Status: 400 - Response Time: 16ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {"username":"john_doe","password":"securepassword","balance":100} - Query: {}
+    - Params: {}
+[2025-03-03T01:56:59.193Z] POST /api/v1/auth/register-customer
+    - Status: 201 - Response Time: 9ms
+    - IP: ::1 - User-Agent: PostmanRuntime/7.43.0
+    - Body: {"name":"vanphutin","username":"john_doe","password":"securepassword","balance":100} - Query: {}
+    - Params: {}
