@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "main": "node src/index.js",
-    "start": "src/index.js",
+    "start": "cross-env NODE_ENV=production nodemon --inspect src/index.js",
     "dev": "cross-env NODE_ENV=development nodemon --inspect src/index.js"
   },
   "keywords": [],
