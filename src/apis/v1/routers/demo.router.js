@@ -1,7 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const DemoController = require("../controllers/demo.controller");
+const AuthController = require("../controllers/auth.controller");
+const MiddleWare = require("../middlewares/validate.middleware");
 
-router.get("/", DemoController.getAllDemos);
+router.post(
+  "/register-customer",
+
+  MiddleWare.validateRegister,
+  AuthController.registerCustomer
+);
 
 module.exports = router;

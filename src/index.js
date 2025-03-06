@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `./src/.env.${process.env.NODE_ENV || "development"}`,
 });
+const swaggerDocs = require("./config/swagger");
 
 const express = require("express");
 const cors = require("cors");
@@ -9,6 +10,9 @@ const api_router_v1 = require("./apis/v1/routers/index.router");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+//Sử dụng Swagger
+swaggerDocs(app);
 
 // Middleware requestLogger
 const {

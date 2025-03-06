@@ -1,0 +1,28 @@
+[2025-03-06T05:01:23.925Z] ERROR POST /api/v1/auth/register-customer
+    - Status: 200
+    - Message: Cannot destructure property 'username' of 'req.body' as it is undefined.
+    - Stack: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+    at module.exports.validateRegister (D:\DoAn\CDIO-3\src\apis\v1\middlewares\validate.middleware.js:4:11)
+    at Layer.handle [as handle_request] (D:\DoAn\CDIO-3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\DoAn\CDIO-3\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\DoAn\CDIO-3\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\DoAn\CDIO-3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:47:12)
+[2025-03-06T05:02:00.337Z] ERROR POST /api/v1/auth/register-customer
+    - Status: 200
+    - Message: Cannot destructure property 'username' of 'req.body' as it is undefined.
+    - Stack: TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+    at module.exports.validateRegister (D:\DoAn\CDIO-3\src\apis\v1\middlewares\validate.middleware.js:4:11)
+    at Layer.handle [as handle_request] (D:\DoAn\CDIO-3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\DoAn\CDIO-3\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\DoAn\CDIO-3\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\DoAn\CDIO-3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\DoAn\CDIO-3\node_modules\express\lib\router\index.js:47:12)
