@@ -77,25 +77,50 @@ module.exports.login = async (req, res) => {
 
   try {
     const user = await Auth.findUserByUsername(username);
-    if (!user || !(await bcrypt.compare(password, user.password))) {
+    if (!user) {
       return res
         .status(401)
         .json({ status: "error", message: "Invalid credentials" });
     }
 
-    const expiresIn_accessToken = "24h";
+    // Kiểm tra mật khẩu
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res
+        .status(401)
+        .json({ status: "error", message: "Invalid credentials" });
+    }
+
+    // Tạo accessToken và refreshToken
     const accessToken = jwt.sign(
-      { userId: user.id, role: user.role_id },
-      ACCESS_TOKEN_SECRET,
-      { expiresIn: expiresIn_accessToken }
+      { userId: user.employee_id, role: user.role_id },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "24h" }
     );
-    const refreshToken = jwt.sign({ userId: user.id }, REFRESH_TOKEN_SECRET, {
-      expiresIn: "7d",
-    });
+
+    const refreshToken = jwt.sign(
+      { userId: user.employee_id },
+      process.env.REFRESH_TOKEN_SECRET,
+      { expiresIn: "7d" }
+    );
+
+    const userInfo = {
+      employee_id: user.employee_id,
+      name: user.name,
+      username: user.username,
+      phone: user.phone,
+      email: user.email,
+      role_id: user.role_id,
+    };
 
     return res.json({
       status: "success",
-      data: { accessToken, refreshToken, expiresIn: expiresIn_accessToken },
+      data: {
+        accessToken,
+        refreshToken,
+        user: userInfo,
+        expiresIn: "24h",
+      },
     });
   } catch (error) {
     console.error("Error in login:", error.message);
